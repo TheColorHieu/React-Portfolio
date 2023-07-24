@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import './Contact.css';
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -37,6 +38,9 @@ export default function Contact() {
             name="name"
             value={formData.name}
             onChange={handleChange}
+             //here we are adding a css class name to style this box
+            className="contact-input"
+            
           />
         </div>
         <div>
@@ -47,15 +51,20 @@ export default function Contact() {
             name="email"
             value={formData.email}
             onChange={handleChange}
+             //here we are adding a css class name to style this box
+            className="contact-input"
           />
         </div>
         <div>
           <label htmlFor="message">Message:</label>
-          <textarea
+          <input
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
+            //here we are adding a css class name to style this box
+            className="contact-input"
+            
           />
         </div>
         <button type="submit">Submit</button>
